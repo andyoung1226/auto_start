@@ -1,0 +1,11 @@
+[Unit]
+Description=Xavier Log Service
+Requires=jetson_stats.service
+After=network.target network-online.target
+Restart=on-failure
+
+[Service]
+ExecStart=/home/patrol1/auto_start/start_logging.sh
+Restart=on-abort
+[Install]
+WantedBy=multi-user.target
