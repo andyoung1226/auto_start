@@ -1,0 +1,8 @@
+[Unit]
+Description=Patorl Relay auto start service
+After=network.target network-online.target
+[Service]
+ExecStart=/home/patrol2/auto_start/start_relay.sh
+Restart=on-abort
+[Install]
+WantedBy=multi-user.target

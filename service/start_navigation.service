@@ -1,10 +1,9 @@
 [Unit]
 Description=Patrol navigation auto start service
-Require=core_start.service
-After=core_start.service
+
 [Service]
 ExecStart=/home/patrol1/auto_start/start_navigation.sh
-TimeoutStartSec=5
 Restart=on-failure
+
 [Install]
 WantedBy=multi-user.target
