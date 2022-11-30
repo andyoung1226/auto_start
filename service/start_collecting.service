@@ -1,0 +1,9 @@
+[Unit]
+Description=Wheelchair bringup auto start service
+
+[Service]
+ExecStart=/home/wc1/auto_start/start_collecting.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
